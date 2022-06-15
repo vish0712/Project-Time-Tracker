@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Project  Time Tracker</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<h6>Project Time Tracker</h6>
+		<ul>
+			<li><a href="index.html" >Home</a></li>
+			<li><a href="report.html" class="active">Report</a></li>
+			<li><a href="team.html" >Team</a></li>
+			<li><a href="track.html">Track</a></li>
+		</ul>
+	</header>
+
+    <div class="report">
+		
+		<h4>ABSTRACT</h4><br>
+        <p>Project Time Tracker is a website that helps in keeping track of the duration or time taken to complete our projects or tasks, be it personal or work. It is a productivity tool that helps students, teachers, employees manage their projects by tracking the time taken to finish it. It’s a simple and easy to use tool. Includes many features that help in making the time tracking simple and organised. Can create multiple projects with different project titles. It also allows us to add tasks to all the projects created. Can track the time taken to finish each of those tasks by starting the timer , which can also be stopped when required. Once the project is completed we get to change the status of the project to completed. The projects which are not required can also be deleted. </p><br>
+		<p>The website is built using various technologies. They include HTML, CSS and JavaScript. The frontend of the website which includes the UI/UX is built using HTML and CSS. The functions (adding the task , projects, starting the timer, stopping the timer, changing the status of the project, deleting the project, etc) are built using JavaScript.</p>
+		<br><br>
+		<h4>INTRODUCTION</h4><br>
+		<p>A problem that many students face is time management. Especially when it comes to organising our work which includes assignments, homework, projects, etc. Keeping track of all the projects and tasks is not only hectic but also time consuming. We tend to forget many tasks that need to be completed. We either hurry and finish the project with poor results or take too long and miss the deadline. This issue is also faced by others….teachers, parents, employees, etc.  Our website solves this problem. </p>
+		<br>
+		<p>Project Time Tracker is a productivity tool that helps in keeping track of the duration taken to complete a project/task. It allows us to create projects with the title of our choice and add tasks to those projects. The tasks include the description of what needs to be accomplished in the project. Once the project is added task, project, status, duration, date, action is displayed for each and every task of the project title. We can track the duration by starting the timer for the task we wish to complete. We can start the timer of multiple projects and tasks simultaneously. We can stop it when required too when we need to take a break and start it on a different day. When we finish all the tasks of a particular project, we can indicate that in the page by changing the status of the project/task to completed. The status column will display a green completed button. There is also a column for date which shows when the task/project was completed. If we need to delete a project , we could delete the entire project with its tasks by clicking on the delete button.</p>
+		<br>
+		<p>All these functions makes it easier to organise our tasks in different projects, track them and complete them.</p>
+		<br><br>
+		<h4>METHODOLOGY</h4><br>
+		<p>The entire website is built using HTML, CSS and JavaScript. It contains 3 html pages - index.html, track.html , team.html. Index.html contains a nav bar that has links to track.html and team.html pages. It also contains information about the website. It mentions what the webapp does, its features, steps to use it, etc. track.html page contains the functions to add tasks, add projects, start timer, change the status. It also displays the same. 
+			team.html contains information about our team. 
+			
+			The index page is designed with parallax scrolling. Parallax scrolling is a web site trend where the background content (i.e. an image) is moved at a different speed than the foreground content while scrolling. It adds depth and movement to the browsing experience. To create the parallax effect html, CSS and JavaScript were used. First the background pictures were added to a section with specific IDs. The content were added below it in a div with class “content”. The parallax effect was created with JavaScript which is mentioned in the bottom of the html page under the script tag. We used the getElementById function. The getElementById() method returns the element that has the ID attribute with the specified value. This method is one of the most common methods in the HTML DOM, and is used almost every time you want to manipulate, or get info from, an element on your document. In our website, every background image was given a separate ID, for example, the image of moon was assigned ID “moon”. This was retrieved by using getElementById(“moon”).  Then we attached the scrolling effect to those images by using addEventListener. The addEventListener() method is used to attach an event handler to a particular element. It does not override the existing event handlers. Events are said to be an essential part of the JavaScript. A web page responds according to the event that occurred. Events can be user-generated or generated by API's. An event listener is a JavaScript's procedure that waits for the occurrence of an event. We defined a variable value and by mentioning different values for it we were able to scroll different images to a certain part of the page while scrolling, thus creating the parallax effect. 
+			</p>
+		<br>
+		<p>The nav bar contains links to different html pages of the website, which is created using <a></a> which is the link tag. The rack page uses bootstrap for buttons, columns and rows. To add a project addProject function is defined where getElementById is used to retrieve the input value of the project. The local storage is initialized if not already initialized. The new project is pushed to the local storage using push operation. All the projects entered are re-loaded with loadAllProjects() function. TO load all the projects in the dropdown the particular project is retrieved using ID and returned. To add a task we used a button with data-target “#addTaskModal”. In the JavaScript file addTask function is defined in which variables project and task were created  and selected and used to retrieve the projects and tasks that were typed and submitted by the user. These projects and tasks are added to the projects array. The local storage is updated. The modal is then hid using jQuery. To display all the tasks, another function called showAllTasks is defined. The tasks are displayed by considering if the project’s timer is started or if its completed. This is shown in a table using <td> and <tr> tags.
+			The total duration is calculated and displayed by creating a variable called duration and initialising it to zero. We used log.startTime and log.endTime to calculate the time taken until the status is changed to “stop”. This duration  which is in milliseconds is taken and converted to hours, minutes and seconds. This is done by using Math.abs, toFixed, Math.floor functions. The timer is displayed in a table. The task to change the status was implemented using a form. The current date is displayed using a function called getCurrentTimeInTaskStartFormat. deleteProject function is defined to delete the project. Input of the project to delete is retrieved and confirmation is asked to delete the particular project/task. If the yes button is clicked then the willDelete function is executed. The project/task is removed from the array and the local storage is updated. This is done using a for loop and splice operation. After the deletion of the project/task loadAllProjects and showAllTasks are executed to re load the data.
+			
+			</p>
+		<br><br>
+		<h4>EXPERIMENTAL RESULTS</h4><br>
+		<p>After writing the html, css and Javascript code and running it we could observe the desired output. We can create a project with a title. We can add as many tasks as possible to the project created. All the projects created are successfully shown in the dropdown display while selecting a project. Task, project, status, duration, date and action are successfully displayed once the projects are created and tasks are added. Under the action column, the change status dropdown is displayed with various options available that include starting the timer, stopping the timer, mark as completed and delete. The timer starts immediately after changing the status to “start” and the timer is displayed in hour:minute:seconds format under the duration column. When the stop option is clicked, the timer is stopped immediately, and the time is saved as it is. A green button which says “completed” is displayed next to the duration column along with how long it took to complete it. The date is also displayed in day:month:year format under the date column. We can also the delete the project. Additionally when the delete option is clicked, a confirmation is asked whether the user is sure if he/she wants to delete that particular project or task. Once the confirmation is received, the project or task is successfully deleted.</p>
+		<br><br>
+		<h4>CONCLUSION AND FUTURE WORK</h4><br>
+		<p>The different tasks ,that include creating a project, adding tasks, starting the timer, stopping the timer, displaying the duration and date, etc, function perfectly. 
+
+			Our future work in this project would be to create login page and have a session for every user. 
+			We could also integrate options of adding voice notes and scratch pads. We could also work on attaching the completed files to the projects. 
+			</p>
+
+	</div>
+        
+</body>
+</html>

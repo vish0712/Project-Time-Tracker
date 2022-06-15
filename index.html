@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Project  Time Tracker</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="jscript.js"></script>
+</head>
+<body>
+	<header>
+		<h6>Project Time Tracker</h6>
+		<ul>
+			<li><a href="#" class="active">Home</a></li>
+			<li><a href="report.html">Report</a></li>
+			<li><a href="team.html">Team</a></li>
+			<li><a href="track.html">Track</a></li>
+			
+		</ul>
+	</header>
+	<section>
+		<img src="img/bg .jpg" id="bg">
+		<img src="img/moon .png" id="moon">
+		<img src="img/mountain.png" id="mountain">
+		<img src="img/road.png" id="road">
+		<h2 id="text">Create Track Complete</h2>
+	</section>
+	<div class="content">
+		<p>Welcome to Project Time Tracker!! Our project time tracker is a productivity tool that helps you keep track of the duration or time taken to cmoplete your projects, be it personal or work!</p><br><br>
+		<p>Features:</p><br>
+		<ul>
+			<li>Add tasks</li>
+			<li>Assign title and relavant project name</li>
+			<li>Save Tasks as they reach completion</li>
+			<li>Pause/Cancel tasks</li>
+			<li>Delete existing tasks</li>
+			<li>Track task currently in progress</li>
+		</ul><br><br>
+		<p>Technology used:</p><br>
+		<ul>
+			<li>Javascript</li>
+			<li>HTML</li>
+			<li>CSS</li>
+		</ul><br><br>
+		<p>How to use it?</p><br>
+		<ul>
+			<li>Click on track on the top right corner, this will take you to the project time tracker console </li>
+			<li>To add a task click on the "Add Task" button</li>
+			<li>Write the name of the project and click on "Add Project</li>
+			<li>Write the task you wish to accomplish</li>
+			<li>Before clicking on "Add task" select the project you have added from the "Project" drop down menu</li>
+			<li>Click on "Add Task" and your project will be successfully added!</li>
+			<li>To keep track of the duration of the project click on "Change Status" and "Start" from the drop down menu to start recording</li>
+			<li>Once you are done with the project you can stop recording by clicking on "Change status" and then "Mark as completed" from the drop down menu, or if you wish to take a break from the project click on "Stop"</li>
+			<li>If you wish to clear your project console, select the project you want to delete and click on the "Delete Project" button</li>
+		</ul><br><br>
+		<p>Why do we need it?</p><br>
+		<ul>
+			<li>To keep a record of how much tie it takes to finish a project </li>
+			<li>for businesses , the numwerous benefits of doing time tracking include</li>
+			<ul>
+				<li>Transparency into work processes</li>
+				<li>Increased accountability in employees</li>
+				<li>Understanding of your billing and operational efficiency</li>
+				<li>Knowledge where resource demand is the highest</li>
+				<li>Tracing how the budget gets burned</li>
+			</ul>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		let bg=document.getElementById("bg");
+		let moon=document.getElementById("moon");
+		let mountain=document.getElementById("mountain");
+		let road=document.getElementById("road");
+		let text=document.getElementById("text");
+
+		window.addEventListener("scroll",function(){
+			var value=window.scrollY;
+
+			bg.style.top=value * 0.5 +'px';
+			moon.style.left=-value * 0.5 +'px';
+			mountain.style.top=-value * 0.5 +'px';
+			road.style.top=value * 0.5 +'px';
+			road.style.top=value * 1 +'px';
+		})
+	 </script>
+</body>
+</html>
